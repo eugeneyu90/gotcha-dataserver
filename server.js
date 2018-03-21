@@ -39,7 +39,7 @@ app.get('/', (req, res) => {
 
 app.post('/imageblob', (req, res) => {
 
-  res.json(req.body)
+  res.json(req)
 }) 
 
 // Start the server
