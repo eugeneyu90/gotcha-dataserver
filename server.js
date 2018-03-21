@@ -21,6 +21,12 @@ app.get('/', (req, res) => {
   res.send('Hello there')
 })
 
+app.post('/imageblob', (req, res) => {
+  const data = req.body
+  console.log(data)
+  res.json(data)
+})
+
 // Start the server
 app.listen(PORT, () => {
   console.log('Server listening on: http://localhost:%s', PORT);
