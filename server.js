@@ -40,7 +40,7 @@ app.get('/', (req, res) => {
 app.post('/imageblob', (req, res) => {
 
   res.json(req.body)
-})
+}) 
 
 // Start the server
 app.listen(PORT, () => {
