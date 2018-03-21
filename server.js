@@ -2,6 +2,22 @@ const express = require('express')
 const app = express()
 const bodyParser = require('body-parser')
 
+// import * as firebase from 'firebase'
+// // import FirebaseStorage from 'firebase'
+
+// // Initialize Firebase
+// const firebaseConfig = {
+//   apiKey: "AIzaSyBWlhoHRN3YtIamdrrdntfd03Y5TZHQTWs",
+//   authDomain: "gotchaapp-2018.firebaseapp.com",
+//   databaseURL: "https://gotchaapp-2018.firebaseio.com",
+//   storageBucket: "gotchaapp-2018.appspot.com"
+// };
+
+// if (firebase.apps.length === 0) {
+//   firebase.initializeApp(firebaseConfig);
+// }
+
+
 // Use the environment variable or use a given port
 const PORT = process.env.PORT || 8080;
 
@@ -22,7 +38,7 @@ app.get('/', (req, res) => {
 })
 
 app.post('/imageblob', (req, res) => {
-  const data = req.body
+  const data = req.body.data
   console.log(data)
   res.json(data)
 })
