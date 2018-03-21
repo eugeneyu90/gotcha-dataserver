@@ -38,7 +38,8 @@ app.get('/', (req, res) => {
 })
 
 app.post('/imageblob', (req, res) => {
-  res.json({success: true})
+
+  res.json(req.body)
 })
 
 // Start the server
