@@ -25,11 +25,11 @@ const PORT = process.env.PORT || 8080;
 // care of providing requested data
 // const server = http.createServer(handleRequest);
 
-app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
-  next();
-});
+// app.use((req, res, next) => {
+//   res.header("Access-Control-Allow-Origin", "*");
+//   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
+//   next();
+// });
 
 app.use(bodyParser.json())
 
@@ -38,9 +38,7 @@ app.get('/', (req, res) => {
 })
 
 app.post('/imageblob', (req, res) => {
-  const data = req.body.data
-  console.log(data)
-  res.json(data)
+  res.json(req.body)
 })
 
 // Start the server
